@@ -18,7 +18,14 @@ private:
 
 	The way to do this is as follows:
 	- Create a getter function that returns the data member. This function should be const, so that it can't be modified outside the class
+	-Syntax for getters: data_type getFunctionName() const;
+
 	- Create a setter function that takes a const reference to the data member as a parameter using the & operator. This function should be void, as it doesn't return anything
+	-Syntax for setters: void setFunctionName(const return_type& member);
+
+	-const is used so that the function will not modify the object's data members
+	-& is used so that the function will use the address of the parameter, not the value
+
 	*Note: The getter and setter functions should be declared in the header file, but defined in the .cpp file. It is useful to think of the header file as the function prototype, and the .cpp file as the function definition.
 
 4) Create any other functions that you want to use with the class. These should be declared in the header file and defined in the .cpp file as well.
@@ -36,16 +43,11 @@ public: //public members are accessible outside the class
 
 	Cat(const std::string& name, const std::string& breed, const std::string& color, int age);
 	//this is the constructor, which has all the parameters for the class.
-	//These should be specified as const references, so that they can't be modified outside the class. The & operator will be used to pass the parameters by reference instead of by value.
+	//These should be specified as **const references**, so that they can't be modified outside the class. The & operator will be used to pass the parameters by reference instead of by value.
 
 	/*~Cat();*/ //this is the destructor. It is not generally necessary, unless you are doing specific memory management tasks, such as deleting pointers
 
 	//Accessors and Mutators (Getters and Setters)
-	/*-Syntax for getters: return_type getFunctionName() const;
-
-	  -Syntax for setters: void setFunctionName(const return_type& member);
-	  const is used so that the function will not modify the object's data members
-	  & is used so that the function will use the address of the parameter, not the value*/
 
 	std::string getName() const; //getter
 	void setName(const std::string& name); //setter

@@ -9,8 +9,8 @@
 	-//Syntax: ClassName::ClassName(parameter& member) : member1(value), member2(value), member3(value) {}
 
 3)Create the getters and setters for the class.
-	-Syntax for the getters : return_type Class::getFunctionName() const { return member; }
-	-Syntax for the setters : void Class::setFunctionName(const return_type& member) { this->member = member; }
+	-Syntax for the getters : return_type ClassName::getFunctionName() const { return member; }
+	-Syntax for the setters : void ClassName::setFunctionName(const data_type& member) { this->member = member; }
 	-The const keyword means that the function will not change the object's data members.
 	-The & symbol means that the function will use the address of the parameter, not the value.
 	-The 'this' keyword and arrow operator (->) are used to access the object's data members
@@ -25,11 +25,7 @@ Cat::Cat(const std::string& name, const std::string& breed, const std::string& c
 
 //Cat::~Cat() {}
 
-/*Getters and Setters
-
-The syntax for the getter is: returnType ClassName::getFunctionName() const { return member; }
-
-The syntax for the setter is: void ClassName::setFunctionName(const returnType& member) { this->member = member; }*/
+//Getters and Setters
 
 std::string Cat::getName() const { return name; }
 void Cat::setName(const std::string& name) { this->name; }
