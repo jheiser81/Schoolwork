@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Library_New_.Models.Authors>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Authors</h1>
+
+<p>
+    <a asp-action="AddAuthor">Add New Author</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Author_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Author_ID }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.Author_ID }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Author_ID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
