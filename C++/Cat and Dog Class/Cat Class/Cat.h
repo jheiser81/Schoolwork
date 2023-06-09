@@ -16,7 +16,7 @@ private:
 
 3) Specify the accessors and mutators (getters and setters) for the class members. Each data member needs a getter followed by a setter.
 
-	The way to do this is as follows:
+   The way to do this is as follows:
 	- Create a getter function that returns the data member. This function should be const, so that it can't be modified outside the class
 	-Syntax for getters: data_type getFunctionName() const;
 
