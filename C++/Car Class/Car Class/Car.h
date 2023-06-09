@@ -11,7 +11,7 @@ private:
 	//public members
 	};
 
-2) Create the constructor and destructor (if using). The constructor is used to initialize the class members, the destructor is used to free up memory.
+2) Create the constructor and destructor (if using). The constructor is used to initialize the class members, the destructor is used to free up memory. Const is used to make sure that the function doesn't modify the object's data members. The & symbol is used to make sure that the function uses the address of the parameter, not the value.
    -Syntax: Class(parameter& member, parameter& member);
 
 3) Specify the accessors and mutators (getters and setters) for the class members. Each data member needs a getter followed by a setter.
