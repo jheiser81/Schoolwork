@@ -14,6 +14,7 @@ int main() {
 	myCar.stop();			//Outputs: Car stopped
 
 	std::cout << "\n\n" << "--------Truck--------\n" << myTruck.getInfo() << "\n"; //Outputs Make: Ford, Model: F-150, Color: Blue, Year: 2022
+
 	myTruck.soundHorn();	//Outputs: Car horn
 	myTruck.start();		//Outputs: Car started
 	myTruck.accelerate();	//Outputs: Car is accelerating
