@@ -7,10 +7,9 @@ protected:
 
 public:
 	Animal(const std::string& name, const std::string& sound);
-	
+
 	std::string getName() const;
 	void setName(const std::string& name);
 
 	virtual void makeSound();
-	/*virtual std::string printInfo();*/
 };

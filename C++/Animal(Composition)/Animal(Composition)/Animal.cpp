@@ -14,7 +14,3 @@ void Animal::setName(const std::string& name) {
 void Animal::makeSound() {
 	std::cout << sound << std::endl;
 }
-
-//std::string Animal::printInfo() {
-//	return "Name: " + name + ", Sound: " + sound + "\n";
-//}
