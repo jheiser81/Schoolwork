@@ -18,25 +18,6 @@ int main()
 
 	std::cout << "\n";
 
-	//int totalGames = 0;
-	//
-	//while (totalGames < 60)
-	//{
-	//	for (int i = 0; i < 20; i++)
-	//	{
-	//		owner.playFetchWithDog("frisbee");
-	//		totalGames++;
-	//	}
-	//	std::cout << "Taking a break. Total games played: " << totalGames << "\n\n";
-	//
-	//	if (totalGames >= 60)
-	//	{
-	//		std::cout << "The owner and dog are both tired and done for the day." << "\n";
-	//	}
-	//}
-
-	//this isn't working, the totalGames counter is correct but the totalFetches counter is not updating
-
 	for (int i = 0; i < 41; i++)
 	{
 		owner.playFetchWithDog("frisbee");
