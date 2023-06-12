@@ -1,5 +1,6 @@
 #pragma once
 #include "Animal.h"
+#include <string>
 
 //Instructions:
 /*
@@ -13,3 +14,16 @@
 	- It should also incorporate an additional integer member variable `totalFetches`, initially set to 0. This variable will keep track of the number of times the pet owner has played "fetch" with their dog(5 points).
 	- Implement a function `playFetchWithDog()` that takes a string argument representing an item.Each time the `playFetchWithDog()` function is called, increment `totalFetches` by 1. If `totalFetches` reaches or surpasses 20, print a message indicating that the owner needs a break from playing, reset `totalFetches` to 0, and modify the dog's name by appending the string representation of `totalFetches` to its original name (15 points).
 	- Implement a function `hearAnimalSound()` that takes as argument an `Animal` object owned by the `PetOwner`. The function should call the `makeSound()` function of the given `Animal` object, thereby printing the sound made by the `Animal` (10 points).*/
+
+class PetOwner {
+private:
+	Animal dog;
+	Animal cat;
+	int totalFetches = 0;
+
+public:
+	PetOwner(const Animal& dog, const Animal& cat); //passing Animal objects dog and cat by reference
+
+	void playFetchWithDog(std::string item);
+	void hearAnimalSound(const Animal& animal);
+};
