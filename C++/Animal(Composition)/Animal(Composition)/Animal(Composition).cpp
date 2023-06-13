@@ -4,18 +4,23 @@
 
 int main()
 {
-    PetOwner petOwner("Mittens", "Roger", "Meow", "Woof");
+	Animal dog("Oli", "Bark");
+	Animal cat("Miau Miau", "Meow");
+	//dog and cat are objects of the Animal class
 
-    petOwner.hearAnimalSound(petOwner.getCat()); //this was giving me an inaccessible error, had to look up how to fix it.    
-    petOwner.hearAnimalSound(petOwner.getDog());
+	PetOwner owner(dog, cat); //owner is an object of the PetOwner class, and uses the dog and cat objects as parameters
 
-    for (int i = 0; i < 20; i++) {
-		petOwner.playFetchWithDog("ball");
+	std::cout << "Dog name: " << dog.getName() << "\n";
+	std::cout << "Cat name: " << cat.getName() << "\n\n"; //calling the getName function with the dog and cat objects to print their names
+
+	owner.hearAnimalSound(dog);
+	owner.hearAnimalSound(cat); //calling the hearAnimalSound function with the dog and cat objects to print their sounds
+
+	std::cout << "\n";
+
+	for (int i = 0; i < 41; i++)
+	{
+		owner.playFetchWithDog("frisbee");
 	}
-
-    std::cout << "The dog's name is now " << petOwner.getDog().getName() << "\n";
-
-    return 0;
+	return 0;
 }
-
-

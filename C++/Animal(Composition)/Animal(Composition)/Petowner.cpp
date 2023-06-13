@@ -1,29 +1,19 @@
 #include "Petowner.h"
 #include <iostream>
 
-PetOwner::PetOwner(const std::string& catName, const std::string& dogName, const std::string& catSound, const std::string& dogSound) : cat(catName, catSound), dog(dogName, dogSound), totalFetches(0) {}
+PetOwner::PetOwner(const Animal& dog, const Animal& cat) : dog(dog), cat(cat) {} //Petowner takes in two animals, a dog and a cat, by reference
 
-void PetOwner::playFetchWithDog(const std::string& item) {
+void PetOwner::playFetchWithDog(std::string item) {
 	totalFetches++;
-	if (totalFetches >= 20) {
-		std::cout << "The owner needs a break from playing with the dog. \n";
-		dog.setName(dog.getName() + std::to_string(totalFetches));
+	std::cout << "Playing fetch with " << dog.getName() << " using a " << item << "\n";
+
+	if (totalFetches >= 20) { //will print out the name of the dog and the total number of fetches only once totalFetches is greater than or equal to 20
+		std::cout << "The owner needs a break from playing. " << "\n\n";
+		dog.setName(dog.getName() + "_" + std::to_string(totalFetches)); //added underscore to separate the dog's name from the totalFetches number
 		totalFetches = 0;
 	}
-	else {
-		std::cout << "The owner is playing fetch with the dog. \n";
-	}
 }
 
-Animal& PetOwner::getCat() {
-	return cat;
-}
-
-Animal& PetOwner::getDog() {
-	return dog;
-}
-
-void PetOwner::hearAnimalSound(Animal& animal) {
+void PetOwner::hearAnimalSound(const Animal& animal) {
 	animal.makeSound();
 }
-

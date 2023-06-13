@@ -7,14 +7,18 @@ std::string Animal::getName() const {
 	return name;
 }
 
+std::string Animal::getSound() const {
+	return sound;
+}
+
 void Animal::setName(const std::string& name) {
 	this->name = name;
 }
 
-void Animal::makeSound() {
-	std::cout << sound << std::endl;
+void Animal::setSound(const std::string& sound) {
+	this->sound = sound;
 }
 
-//std::string Animal::printInfo() {
-//	return "Name: " + name + ", Sound: " + sound + "\n";
-//}
+void Animal::makeSound() const {
+	std::cout << name << " says " << sound << "\n";
+}
