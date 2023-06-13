@@ -4,8 +4,10 @@
 class Vehicle {
 public:
 	Vehicle(const std::string& make, const std::string& model, int year);
+
 	virtual void drive() = 0; //pure virtual function, means it has no implementation
 	virtual void honk() = 0;
+
 	std::string getMake() const;
 	std::string getModel() const;
 	int getYear() const;
