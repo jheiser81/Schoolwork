@@ -12,5 +12,5 @@ public:
 	PetOwner(const Animal& dog, const Animal& cat); //passing Animal objects dog and cat by reference
 
 	void playFetchWithDog(std::string item);
-	void hearAnimalSound(const Animal& animal);
+	void hearAnimalSound(const Animal& animal); //passing Animal object animal by reference
 };
