@@ -37,15 +37,11 @@ functionality of each converter class.
 class Converter
 {
 public:
-	Converter();
+	Converter(); //default constructor, doesn't have any parameters
 	virtual ~Converter();
 
+	//virtual functions, to be overridden by derived classes
 	virtual double toMetric(double valueToConvert) = 0;
 	virtual double toImperial(double valueToConvert) = 0;
 	virtual void description() const = 0;
-	
-
-	
-		
-
 };
