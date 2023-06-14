@@ -8,4 +8,10 @@ public:
 
 	void drive() override;
 	void honk() override;
+
+	int getNumberOfCars() const;
+	void setNumberOfCars(int numberOfCars);
+
+private:
+int numberOfCars;
 };
