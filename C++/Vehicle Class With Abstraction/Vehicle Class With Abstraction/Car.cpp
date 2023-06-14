@@ -8,5 +8,5 @@ void Car::drive() {
 }
 
 void Car::honk() {
-	std::cout << "Honk! Honk!\n";
+	std::cout << "Beep! Beep!\n";
 }
