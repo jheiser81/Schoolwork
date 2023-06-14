@@ -21,9 +21,9 @@ int main()
 		std::cout << "\n";
 	}
 
-	for (size_t i = 0; i < size; i++)
+	for (size_t i = 0; i < size; i++) 
 	{
-		delete vehicles[i];
+		delete vehicles[i]; //deletes the memory allocated for each vehicle
 	}
 
 	std::cout << "-------------------------\n";
@@ -31,7 +31,7 @@ int main()
 	Train train("Thomas", "The Tank Engine", 1984, 60);
 	train.drive();
 	train.honk();
-	std::cout << train.getMake() << " " << train.getModel() << " " << train.getYear() << " " << train.getNumberOfCars() << "\n";
+	std::cout << train.getMake() << " " << train.getModel() << " " << train.getYear() << " " << train.getNumberOfCars() << "\n"; //couldn't call getNumberOfCars in the array because it's not a member of Vehicle
 
 	return 0;
 }
