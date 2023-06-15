@@ -26,7 +26,7 @@ public:
 	Converter(); //default constructor, doesn't have any parameters
 	virtual ~Converter();
 
-	//virtual functions, to be overridden by derived classes
+	//virtual functions, will be overridden by derived classes
 	virtual double toMetric(double valueToConvert);
 	virtual double toImperial(double valueToConvert);
 	virtual void description() const;

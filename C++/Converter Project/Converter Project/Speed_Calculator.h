@@ -7,7 +7,9 @@
 Implement the following functions :
 1. double calculate(double distance, double time) override : This function should calculate speed by
 dividing the given distance by time.
+
 2. protected std::string interpretResult(double result) override : This function should provide an interpretation of the speed result. It could contextualize the result with typical speeds for walking, running, biking, or driving, for example.
+
 3. void description() const override : This function should print a description of the SpeedCalculator
 class's specific functionality.*/
 
@@ -18,6 +20,8 @@ public:
 
 	double calculate(double distance, double time) override;
 	void description() const override;
+
+	std::string getSpeedInterpretation(double result); //heper function for interpretResult
 
 protected:
 	std::string interpretResult(double result) override;

@@ -18,8 +18,3 @@ void HeightConverter::description() const {
 	std::cout << "This is a converter for hight measurements. It can convert between feet and meters.\n";
 }
 
-//void HeightConverter::printMenu() const {
-//	std::cout << "1. Convert feet to meters\n";
-//	std::cout << "2. Convert meters to feet\n";
-//	std::cout << "3. Return to main menu\n";
-//}

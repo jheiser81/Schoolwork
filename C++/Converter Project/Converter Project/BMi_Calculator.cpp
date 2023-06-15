@@ -9,6 +9,11 @@ double BMI_Calculator::calculate(double weight, double height) {
 	return weight / pow(height, 2); //formula for calculating BMI: weight / height^2. Used pow function from cmath library
 }
 
+// Helper function to access interpretResult, since it's protected in the base class
+std::string BMI_Calculator::getBMI_Interpretation(double result) {
+	return interpretResult(result);
+}
+
 //BMI Categories: Underweight = <18.5, Normal weight = 18.5–24.9, Overweight = 25–29.9, Obesity = BMI of 30 or greater, according to the WHO.
 std::string BMI_Calculator::interpretResult(double result) {
 	if (result < 18.5) {

@@ -8,6 +8,11 @@ double Speed_Calculator::calculate(double distance, double time) {
 	return distance / time;
 }
 
+// helpter function to be able to access interpretResult, since it's protected in the base class
+std::string Speed_Calculator::getSpeedInterpretation(double result) {
+	return interpretResult(result);
+}
+
 std::string Speed_Calculator::interpretResult(double result) {
 	if (result < 1) {
 		return "You are walking.";
@@ -25,3 +30,4 @@ std::string Speed_Calculator::interpretResult(double result) {
 
 void Speed_Calculator::description() const {
 	std::cout << "This is a Speed Calculator. It calculates your speed based on distance traveled / time.\n";
+}
