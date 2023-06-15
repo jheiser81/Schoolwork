@@ -18,11 +18,10 @@ int main()
 	std::cin >> unitSystem;
 
 	// Ask for user's weight and height
-	
 	std::cout << "Please enter your weight: ";
 	std::cin >> weight;
 	/*std::cin.ignore();*/ //looked this up, but it's not working.
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //had to look this up, it's working
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //had to look this up, it's working. Removes the auto-generated \n from the input buffer when the user presses enter after inputting a number.
 
 	std::cout << "Please enter your height: ";
 	std::cin >> height;
@@ -41,7 +40,7 @@ int main()
 	// Calculate user's BMI and print result
 	BMI_Calculator bmiCalculator;
 	double bmi = bmiCalculator.calculate(weight, height); 
-	std::string interpretation = bmiCalculator.getBMI_Interpretation(bmi);
+	std::string interpretation = bmiCalculator.getBMI_Interpretation(bmi); //calling the helper function to access interpretResult
 	std::cout << "Your BMI is: " << bmi << ", which is considered " << interpretation << ".\n";
 
 	// Ask user for distance and speed
@@ -64,7 +63,7 @@ int main()
 	double speed = speedCalculator.calculate(distance, time);
 
 	// Interpret speed result
-	std::string speedInterpretation = speedCalculator.getSpeedInterpretation(speed);
+	std::string speedInterpretation = speedCalculator.getSpeedInterpretation(speed); //calling the helper function to access interpretResult
 
 	if (unitSystem == "imperial")
 	{
@@ -82,7 +81,7 @@ int main()
 
 	if (anotherCalculation == "yes")
 	{
-		main();
+		main(); //call main() function to start over
 	}
 	else
 	{

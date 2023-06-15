@@ -23,6 +23,7 @@ public:
 
 	double calculate(double weight, double height) override;
 	void description() const override;
+
 	std::string getBMI_Interpretation(double result); //this is a helper function to be used in interpretResult
 
 protected:
