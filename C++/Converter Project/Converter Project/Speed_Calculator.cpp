@@ -14,17 +14,25 @@ std::string Speed_Calculator::getSpeedInterpretation(double result) {
 }
 
 std::string Speed_Calculator::interpretResult(double result) {
-	if (result < 1) {
+	if (result == 0) {
+		return "You are not moving.";
+	}
+	else if (result >= 0 && result < 5)
+	{
 		return "You are walking.";
 	}
-	else if (result >= 1 && result < 10) {
+	else if (result >= 1 && result < 16) {
 		return "You are running.";
 	}
-	else if (result >= 10 && result < 50) {
+	else if (result >= 10 && result < 48) {
 		return "You are biking.";
 	}
-	else {
+	else if (result > 48 && result < 100) {
 		return "You are driving.";
+	}
+	else
+	{
+		return "You are going really fast! Either you're on a train, a plane, a rocket, or you're traveling through space and time.";
 	}
 }
 

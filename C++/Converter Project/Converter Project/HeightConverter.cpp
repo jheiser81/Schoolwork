@@ -15,6 +15,5 @@ double HeightConverter::toImperial(double valueToConvert) {
 }
 
 void HeightConverter::description() const {
-	std::cout << "This is a converter for hight measurements. It can convert between feet and meters.\n";
+	std::cout << "This is a converter for height measurements. It converts between imperial and metric units.\n";
 }
-
