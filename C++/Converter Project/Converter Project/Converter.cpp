@@ -1,9 +1,11 @@
 #include "Converter.h"
 #include <iostream>
 
+//default constructor and destructor.
 Converter::Converter() {}
-Converter::~Converter() {} //default constructor and destructor
+Converter::~Converter() {}
 
+// member functions from Converter.h, will be overridden by derived classes
 double Converter::toMetric(double valueToConvert)
 {
 	return valueToConvert;

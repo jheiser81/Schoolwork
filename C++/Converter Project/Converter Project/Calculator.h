@@ -25,11 +25,7 @@ public:
 
 	virtual double calculate(double valToCalc1, double valToCalc2) = 0;
 	void printResult(double result);
-
-	virtual void description() const
-	{
-		std::cout << "This is a calculator. It performs basic arithmetic operations.\n";
-	}
+	virtual void description() const;
 
 protected:
 	virtual std::string interpretResult(double result) = 0;

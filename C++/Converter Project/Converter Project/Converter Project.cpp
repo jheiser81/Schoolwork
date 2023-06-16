@@ -8,7 +8,7 @@
 #include "BMI_Calculator.h"
 #include "Speed_Calculator.h"
 
-// This function asks the user if they want to perform another calculation, taking a yes or no input from the user.
+// This function asks the user if they want to perform another calculation, taking a yes or no input from the user. If yes, the program will loop back to the beginning. If no, the program will end. If the user enters an invalid input, the program will ask the user to enter yes or no again.
 #pragma region anotherCalculation function
 
 bool anotherCalculation()
@@ -36,7 +36,7 @@ bool anotherCalculation()
 }
 #pragma endregion
 
-// Contains all of the calculation/conversion for weight, height, and BMI. Called in main() if user chooses BMI calculation.
+// Contains all of the calculation/conversion code for weight, height, and BMI. Called in main() if user chooses BMI calculation.
 #pragma region bmiCalculation function
 
 void bmiCalculation(std::string unitSystem) {
@@ -47,11 +47,11 @@ void bmiCalculation(std::string unitSystem) {
 	std::cin >> weight;
 
 	// Error handling for negative weight or invalid input (not a number)
-	while (weight <= 0 || std::cin.fail()) //cin.fail() checks if operation failed or not
+	while (weight <= 0 || std::cin.fail())									//cin.fail() checks if operation failed or not, the way it's used here checks if the input is a number or not
 	{
 		std::cout << "\nInvalid input. Please enter a positive number for weight: ";
-		std::cin.clear(); //resets error flag, otherwise program will get stuck in an infinite loop
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //had to look this up, it clears the newline character from the input buffer
+		std::cin.clear();													//resets error flag, otherwise program will get stuck in an infinite loop
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //had to look this up, it clears the newline character from the input buffer. Otherwise, it will skip the next input
 		std::cin >> weight;
 	}
 
@@ -79,14 +79,14 @@ void bmiCalculation(std::string unitSystem) {
 	}
 
 	// Calculate user's BMI and print result
-	BMI_Calculator bmiCalculator;
+	BMI_Calculator bmiCalculator; //creating an object of BMI_Calculator class
 	double bmi = bmiCalculator.calculate(weight, height); //calling the calculate function from BMI_Calculator class
 	std::string interpretation = bmiCalculator.getBMI_Interpretation(bmi); //calling the helper function to access interpretResult
 	std::cout << "\nYour BMI is: " << bmi << ", which is considered " << interpretation << ".\n";
 }
 #pragma endregion
 
-// Contains all of the calculation/conversion for distance, time, and speed, in metric or imperial units. Called in main() if user chooses speed calculation.
+// Contains all of the calculation/conversion code for distance, time, and speed, in metric or imperial units. Called in main() if user chooses speed calculation.
 #pragma region speedCalculation function
 
 void speedCalculation(std::string unitSystem) {
@@ -121,13 +121,13 @@ void speedCalculation(std::string unitSystem) {
 	// Convert distance to metric, if needed
 	if (unitSystem == "imperial")
 	{
-		DistanceConverter distanceToConvert;
+		DistanceConverter distanceToConvert; //creating an object of DistanceConverter class
 		distance = distanceToConvert.toMetric(distance); // uses a pointer to access the toMetric function in DistanceConverter if user chose imperial
 	}
 
 	// Calculate user's speed and print result
-	Speed_Calculator speedCalculator;
-	double speed = speedCalculator.calculate(distance, time);
+	Speed_Calculator speedCalculator; //creating an object of Speed_Calculator class
+	double speed = speedCalculator.calculate(distance, time); //calling the calculate function from Speed_Calculator class
 
 	// Interpret speed result
 	std::string speedInterpretation = speedCalculator.getSpeedInterpretation(speed); //calling the helper function to access interpretResult
@@ -135,7 +135,7 @@ void speedCalculation(std::string unitSystem) {
 	if (unitSystem == "imperial")
 	{
 		DistanceConverter distanceToConvert;
-		speed = distanceToConvert.toImperial(speed); // uses a pointer to access the toImperial function in DistanceConverter if user chose imperial
+		speed = distanceToConvert.toImperial(speed); // uses a pointer to access the toImperial function in DistanceConverter to convert speed back to imperial
 	}
 
 	// Print speed result and interpretation
@@ -156,12 +156,12 @@ int main()
 	std::string unitSystem;
 	std::string calculationType;
 
-	do
+	do //do while loop to keep the program running until user chooses to exit. It will run at least once
 	{
 		// Ask user for preferred unit system
 		Converter converter;
 		converter.description(); //calling the description function from Converter class
-		std::cout << "\nPlease choose preferred unit system: metric(kilograms and meters) or imperial(pounds and feet): ";
+		std::cout << "\nPlease choose preferred unit system: metric (kilograms and meters) or imperial (pounds and feet): ";
 		std::cin >> unitSystem;
 
 		//error handling if user input doesn't match metric or imperial
@@ -187,7 +187,7 @@ int main()
 		{
 			// Perform BMI calculation
 			BMI_Calculator bmiCalculator;
-			bmiCalculator.description(); //calling the description function for BMI_Calculator
+			bmiCalculator.description(); //calling the description function from BMI_Calculator class
 
 			WeightConverter weightConverter;
 			weightConverter.description(); //calling the description function for WeightConverter
@@ -211,97 +211,9 @@ int main()
 
 		if (!anotherCalculation())
 		{
-			break;
+			break; //breaks out of the loop if user chooses not to perform another calculation
 		}
-	} while (true);
+	} while (true); //loop will run at least once, and will continue to run until user chooses to exit
 
 	return 0;
 }
-
-//old code
-/*
-		// Ask for user's weight
-		std::cout << "Please enter your weight: ";
-		std::cin >> weight;
-
-		// Error handling for negative weight or invalid input (not a number)
-		while (weight <= 0 || std::cin.fail()) //cin.fail() checks if operation failed or not
-		{
-			std::cout << "Invalid input. Please enter a positive number for weight: ";
-			std::cin.clear(); //resets error flag, otherwise program will get stuck in an infinite loop
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //had to look this up, it clears the newline character from the input buffer
-			std::cin >> weight;
-		}
-
-		// Ask for user's height
-		std::cout << "Please enter your height: ";
-		std::cin >> height;
-
-		// Error handling for negative height or invalid input (not a number)
-		while (height <= 0 || std::cin.fail())
-		{
-			std::cout << "Invalid input. Please enter a positive number for height: ";
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cin >> height;
-		}
-
-		// Convert user's weight and height to metric if needed.
-		// This is because the BMI formula requires metric units.
-		if (unitSystem == "imperial")
-		{
-			WeightConverter weightToConvert;
-			weight = weightToConvert.toMetric(weight);
-
-			HeightConverter heightToConvert;
-			height = heightToConvert.toMetric(height);
-		}
-
-		// Calculate user's BMI and print result
-		BMI_Calculator bmiCalculator;
-		double bmi = bmiCalculator.calculate(weight, height);
-		std::string interpretation = bmiCalculator.getBMI_Interpretation(bmi); //calling the helper function to access interpretResult
-		std::cout << "Your BMI is: " << bmi << ", which is considered " << interpretation << ".\n";
-
-		// Ask user if they want to perform another calculation
-		if (!anotherCalculation())
-		{
-			return 0;
-		}
-		else
-		{
-			std::cout << "Please choose measurement system (metric or imperial): ";
-			std::cin >> unitSystem;
-		}*/
-
-		/*
-		// Ask user for distance and speed
-		std::cout << "Please enter the distance traveled: ";
-		std::cin >> distance;
-
-		std::cout << "Please enter the time it took to travel that distance: ";
-		std::cin >> time;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		// Convert distance to metric, if needed
-		if (unitSystem == "imperial")
-		{
-			DistanceConverter distanceToConvert;
-			distance = distanceToConvert.toMetric(distance);
-		}
-
-		// Calculate user's speed and print result
-		Speed_Calculator speedCalculator;
-		double speed = speedCalculator.calculate(distance, time);
-
-		// Interpret speed result
-		std::string speedInterpretation = speedCalculator.getSpeedInterpretation(speed); //calling the helper function to access interpretResult
-
-		if (unitSystem == "imperial")
-		{
-			DistanceConverter distanceToConvert;
-			speed = distanceToConvert.toImperial(speed); // convert speed back to imperial if user chose imperial
-		}
-
-		// Print speed result and interpretation
-		std::cout << "Your speed is: " << speed << " units per hour. " << speedInterpretation << "\n";*/

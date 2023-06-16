@@ -23,7 +23,8 @@ which will specify the kind of conversions it performs.
 class Converter
 {
 public:
-	Converter(); //default constructor, doesn't have any parameters because we don't need to initialize anything
+	//default constructor, doesn't have any parameters because we don't need to initialize anything
+	Converter();
 	virtual ~Converter();
 
 	//virtual functions, will be overridden by derived classes
