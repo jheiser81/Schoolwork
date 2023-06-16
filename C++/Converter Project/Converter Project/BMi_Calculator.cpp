@@ -31,5 +31,5 @@ std::string BMI_Calculator::interpretResult(double result) {
 }
 
 void BMI_Calculator::description() const {
-	std::cout << "This is a BMI Calculator. It calculates your BMI based on your weight and height according to medical health guidelines.\n";
+	std::cout << "\nThis is a BMI Calculator. It calculates your BMI based on your weight and height according to medical health guidelines.\n";
 }

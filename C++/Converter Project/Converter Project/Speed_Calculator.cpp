@@ -37,5 +37,5 @@ std::string Speed_Calculator::interpretResult(double result) {
 }
 
 void Speed_Calculator::description() const {
-	std::cout << "This is a Speed Calculator. It calculates your speed based on distance traveled / time.\n";
+	std::cout << "\nThis is a Speed Calculator. It calculates your speed based on distance traveled and time taken.\n";
 }

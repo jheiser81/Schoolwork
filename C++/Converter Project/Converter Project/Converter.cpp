@@ -16,5 +16,6 @@ double Converter::toImperial(double valueToConvert)
 
 void Converter::description() const
 {
+	std::cout << "------------------------------------------------------------------------------------\n";
 	std::cout << "This is a converter for measurements. It converts between imperial and metric units.\n";
 }

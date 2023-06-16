@@ -15,5 +15,5 @@ double DistanceConverter::toImperial(double valueToConvert) {
 }
 
 void DistanceConverter::description() const {
-	std::cout << "This is a converter for measurements of distance. It converts between metric and imperial units.\n";
+	std::cout << "The program will also provide an interpretation of your speed based on typical speeds for walking, running, biking, or driving.\n";
 }

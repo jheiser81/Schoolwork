@@ -15,5 +15,5 @@ double WeightConverter::toImperial(double valueToConvert) {
 }
 
 void WeightConverter::description() const {
-	std::cout << "This is a converter for weight measurements from imperial to metric and vice versa.\n";
+	std::cout << "The program converts between imperial and metric units of weight.\n";
 }
