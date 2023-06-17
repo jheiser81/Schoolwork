@@ -1,9 +1,11 @@
 #include "Converter.h"
 #include <iostream>
 
-Converter::Converter(){}
-Converter::~Converter(){}
+//default constructor and destructor.
+Converter::Converter() {}
+Converter::~Converter() {}
 
+// member functions from Converter.h, will be overridden by derived classes
 double Converter::toMetric(double valueToConvert)
 {
 	return valueToConvert;
@@ -16,8 +18,6 @@ double Converter::toImperial(double valueToConvert)
 
 void Converter::description() const
 {
-	std::cout << "This is the base class Converter.\n";
+	std::cout << "------------------------------------------------------------------------------------\n";
+	std::cout << "This is a converter for measurements. It converts between imperial and metric units.\n";
 }
-
-
-

@@ -21,7 +21,7 @@ public:
 	double calculate(double distance, double time) override;
 	void description() const override;
 
-	std::string getSpeedInterpretation(double result); //heper function to access protected interpretResult
+	std::string getSpeedInterpretation(double result); //helper function to access protected interpretResult
 
 protected:
 	std::string interpretResult(double result) override;

@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <iostream>
+
 //Part 3: Base Class Calculator
 /*Next, design a base class called Calculator that contains the following member functions :
 1. virtual double calculate(double val1, double val2) = 0 : This function should take two numerical
@@ -22,8 +24,8 @@ public:
 	virtual ~Calculator();
 
 	virtual double calculate(double valToCalc1, double valToCalc2) = 0;
-	virtual void description() const = 0; //I think this should be pure virtual as well?
 	void printResult(double result);
+	virtual void description() const;
 
 protected:
 	virtual std::string interpretResult(double result) = 0;
