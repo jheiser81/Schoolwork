@@ -1,0 +1,15 @@
+Ctrl + f is to find
+Ctrl + a is to select all
+Ctrl + / is comment out a whole line or block of code
+Ctrl + c is to copy
+Ctrl + x is to cut
+Ctrl + v is to paste
+Ctrl + d is to select duplicates in VS code
+Ctrl + b closes the side panel in VS code
+Ctrl + s is to save
+Ctrl + z is to undo
+Ctrl + y or Ctrl + shift + z is to redo
+Ctrl + left or right arrow skip words
+Ctrl + shift left or right arrow highlight whole words
+shift + ! + tab for HTML Boilerplate 
+When you highlight a word or line of code press Shift + “  or shift + { or without shift [ or `. this will fill in the opening and closing parts

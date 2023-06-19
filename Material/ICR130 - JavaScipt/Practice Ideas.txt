@@ -1,0 +1,11 @@
+Practice Ideas
+1) Make a loop that prints all the numbers from 1-100 (as text) on your webpage
+2) Make a button that changes the colour of the body (then make it change to random colours)
+3) Make 4 buttons the first generates a user-defined amount of random numbers and stores them in the array, the second button will find the largest number, the third finds the smallest number, the fourth sums the array, and the fifth finds the average of the array.
+4) Make an ATM that interacts with the DOM using the previous functions. 
+5) Make a Number guessing game (you can ask me to see an example)
+6) Make a Carousel that you can click through (design your own, not copied code)
+7) Make a nav bar with a hamburger menu
+8) Make the game Simon https://www.google.com/search?q=simon+game&rlz=1C1CHBF_enCA985CA985&oq=simon+game&aqs=chrome..69i57j0i512l9.3910j0j7&sourceid=chrome&ie=UTF-8
+
+9) Connect to an API(some ideas: movie, currency, weather, star wars) and make a search bar that searches for data you are getting
