@@ -1,0 +1,131 @@
+1. Variables, Data types, I/O:
+```pseudo
+DECLARE variableA, variableB
+variableA = some data
+variableB = some other data
+SWAP variableA, variableB
+DISPLAY variableA, variableB
+```
+
+2. String Operations:
+```pseudo
+DECLARE author, quote
+author = 'Name'
+quote = 'Their quote'
+DISPLAY 'I’m inspired by this quote from ', author, ': ', quote
+```
+
+3. Math Operators:
+```pseudo
+DECLARE numA, numB, numC
+numA = 5 + 15 * 3
+numB = 100 / 5 - 5
+numC = numA - numB
+DISPLAY numC
+numC = 15 % 4
+DISPLAY numC
+```
+
+4. Conditional Statements:
+```pseudo
+DECLARE number
+IF number MOD 2 == 0 THEN
+    DISPLAY 'Number is even'
+ELSE
+    DISPLAY 'Number is odd'
+END IF
+
+DECLARE year
+IF year MOD 4 == 0 AND (year MOD 100 != 0 OR year MOD 400 == 0) THEN
+    DISPLAY 'Leap year'
+ELSE
+    DISPLAY 'Not a leap year'
+END IF
+```
+
+5. Loops:
+```pseudo
+DECLARE sum = 0
+FOR i FROM 1 TO 100 DO
+    sum = sum + i
+END FOR
+DISPLAY sum
+
+WHILE password != correctPassword DO
+    INPUT password
+END WHILE
+```
+
+6. Subroutines:
+```pseudo
+FUNCTION add(a, b)
+    RETURN a + b
+END FUNCTION
+
+FUNCTION subtract(a, b)
+    RETURN a - b
+END FUNCTION
+
+FUNCTION multiply(a, b)
+    RETURN a * b
+END FUNCTION
+
+FUNCTION divide(a, b)
+    IF b != 0 THEN
+        RETURN a / b
+    ELSE
+        DISPLAY "Division by zero error"
+    END IF
+END FUNCTION
+
+FUNCTION power(base, exponent)
+    IF exponent == 0 THEN
+        RETURN 1
+    ELSE
+        RETURN base * power(base, exponent-1)
+    END IF
+END FUNCTION
+```
+
+7. Arrays:
+```pseudo
+DECLARE numArray[5]
+FIND max and min from numArray
+DISPLAY max, min
+
+DECLARE randomArray[100]
+FOR i FROM 0 TO 99 DO
+    randomArray[i] = RANDOM NUMBER
+END FOR
+
+DECLARE gameBoard[3][3]
+// Implement Tic Tac Toe
+```
+
+8. OOP:
+```pseudo
+CLASS Animal
+    // Properties and methods common to all animals
+END CLASS
+
+CLASS Dog EXTENDS Animal
+    // Dog-specific properties and methods
+END CLASS
+
+CLASS Cat EXTENDS Animal
+    // Cat-specific properties and methods
+END CLASS
+
+// Create instances of Dog and Cat, interact with them
+```
+
+9. Final Project:
+```pseudo
+CLASS AirlineSystem
+    // Properties for seating, booking, UI, etc.
+    // Methods for performing tasks
+END CLASS
+
+// Create an instance of AirlineSystem and perform tasks
+```
+
