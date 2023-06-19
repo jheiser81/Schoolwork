@@ -1,7 +1,0 @@
-1) Create a folder called Your_Name_Buttons with index.html and a CSS folder. 
-2) Put style.css in the css folder
-3) do all of your buttons in external css - any internal or inline will not be accepted.4) Make 10 link buttons using <a> tags. Play with the style. Reference the slides to see how to do this.
-
-Extra work for those who want to try:
-1) Add transform and transition to your button, hover and active
-2) move the buttons in a container using flexbox and position.

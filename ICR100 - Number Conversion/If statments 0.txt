@@ -1,0 +1,15 @@
+	Using Input/Output, Variables and If stements
+
+Take a user input into a variable and call it beverage, 
+using If statements check to see if it if coffee, tea or soda. 
+If neither print its water
+
+1) if beverage==coffee
+2)	print beverage is coffee
+3) else if beverage is tea
+4) 	print beverage==tea
+5) else if beverage is soda
+6)	print beverage==soda
+6) else
+7)	print beverage==water
+8) end program

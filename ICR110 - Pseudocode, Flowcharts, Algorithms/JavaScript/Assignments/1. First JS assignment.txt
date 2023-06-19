@@ -1,0 +1,31 @@
+1)
+Take two integer (whole number) values from a user (prompt) and add the numbers together.
+Input = 11, 10
+Output = 21
+
+2) Check typeof true and false
+
+3) Take in two strings into variables. One called hello,
+which takes in “Hello,” one called world which takes in “ world” and adds them together.
+input = "hello," " world"
+output = "Hello, world"
+-----------------------------------------------------------------------------------------------
+1)
+let x = +prompt("userinputnumber", "11")
+let y = +prompt("userinputnumber", "10")
+let sum = x + y
+alert(sum)
+
+
+2)
+let a = +prompt("userinputnumber", "11")
+let b = +prompt("userinputnumber", "10")
+let sum = a + b
+alert(sum)
+console.log (typeof a > b)
+
+
+3)
+let Greeting =prompt("Input greeting", "Hello,")
+let Name =prompt("Input name", " World!")
+console.log(typeof Greeting + Name)

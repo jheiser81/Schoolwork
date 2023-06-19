@@ -1,0 +1,43 @@
+1) Make two variables. Make one contain the string “Hello”. Make the other contain the string “world”.  Alert, “Hello, world!” with template literals
+     Input = “Hello”
+      Input = “World”
+      Output “Hello, World”
+
+2) •Make two variables. Both will be a
+character. The first will be “1” the second will be “3” print out “13”  with template literals
+         Input = “1”,
+         Input = “3”
+        Output = “13”
+
+3) Make a prompt that takes a first name, last name, and age.  Get it to print in the console in one line using template literals
+input = "Maya", "Kali", 100
+Output = Hello Maya Kali, you are 100 years old.
+4) Using user inputs and template literals, make a Mad Lib that fills in the blanks and prints:
+Hi! Last week I went _____. My friend ____ and I had so much _____. There were ____
+and _____. When we saw it we felt really ____. You should come next time!
+
+---------------------------------------------------------------------------------------------------
+1)
+let greeting = "Hello,";
+let person = " World!";
+alert(`${greeting}${person}`);
+
+2)
+let Char1 = "1";
+let Num1 = 3;
+console.log(`${Char1}${Num1}`);
+
+3)
+let name1 = prompt("Please enter your first name");
+let name2 = prompt("Please enter your last name");
+let age = prompt("Please enter your age");
+console.log(`Hello, ${name1} ${name2}. You are ${age} years old`);
+
+4)
+let activity = "to the zoo"
+let buddy = "Nick"
+let result = "fun"
+let thing1 = "lions, zebras, and exotic birds"
+let thing2 = "a really fat capybara"
+let result2 = "happy"
+console.log(`Hi! Last week I went ${activity}. My friend ${buddy} and I had so much ${result}. There were ${thing1} and ${thing2}. When we saw it we felt really ${result2}. You should come next time!`)

@@ -1,0 +1,143 @@
+/* #33e51f
+#1616f0
+*/
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+ul{
+    list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.title-header {
+  background-color: #1616f0;
+  height: 125px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.company-name {
+  margin-left: 40px;
+}
+.title-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #33e51f;
+  width: 100%;
+}
+.title-nav-items {
+  margin-right: 40px;
+}
+.main-bg-image {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../img/roof-gc8f6e94a9_1920.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.main-slogan {
+  font-size: 4em;
+  margin-bottom: 1rem;
+}
+.button {
+  display: flex;
+  border: 2px solid #33e51f;
+  width: 125px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.main-slogan-btn-container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 4rem;
+}
+.products{
+  background-image: linear-gradient(#fff, rgb(222, 222, 222));
+  padding: 4rem;  
+}
+.products-title, .services-title{
+  font-size: 2rem;
+  margin: 1em 0;
+}
+.product-description{
+  font-size: 1.2rem;
+}
+.product-images{
+  display: flex;
+  justify-content: space-around;
+  margin: 8rem 0;
+  flex-wrap: wrap ;
+}
+.product-image-item{
+  width: 400px;
+  height: 300px;
+  border: 4px solid black;
+  background-size: cover;
+  background-position: center;
+}
+.product-1{
+  background-image: url("../img/dog-g96942bc85_1920.jpg");
+}
+.product-2{
+  background-image: url("../img/moorea-g59fe2818c_1920.jpg");
+}
+.product-3{
+  background-image: url("../img/flower-ga1ffc9e52_1920.jpg");
+}
+.product-overlay{  
+  background-color: rgba(0, 0, 0, 0.318);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
+}
+.product-btn{
+  margin-bottom: 1rem;  
+}
+.services{
+  margin: 8rem 12rem;
+  background-color: #bbb;
+  padding: 3rem 5rem 5rem;
+  text-align: center;
+}
+
+.footer{
+  background-color: #1616f0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #fff;
+}
+.footer-title{
+  font-size:1.5rem;
+  margin: 1rem 0;
+}
+.footer > ul > li{
+  line-height: 1.5;
+  
+}

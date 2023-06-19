@@ -1,0 +1,13 @@
+let x = "Let's see..";
+let y = "if this works... ";
+let z = "yay it's working!";
+alert(x);
+alert(y);
+alert(z);
+let a = "Now let's try this...";
+alert(a);
+let b = 500;
+let c = 200;
+let sum = b - c;
+alert("the sum of 500 - 200 is...");
+alert(sum);
