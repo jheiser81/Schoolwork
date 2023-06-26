@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Reflection
 
 Public Class Form1
     Dim BizClass(20) As PictureBox                                  'declare an array of 20 pictureboxes
@@ -11,13 +13,17 @@ Public Class Form1
     Dim NameLabel(2) As Label                                       'declare 2 labels
     Dim Names(2) As String                                          'declare 2 strings
     Dim ConnectionObj As SqlConnection
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ConnectionObj = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jheis\OneDrive\Desktop\ARS\Airline.mdf;Integrated Security=True")
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim baseDirectory As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+
+        Dim relativeMdfPath As String = Path.Combine(baseDirectory, "Airline.mdf")
+        ConnectionObj = New SqlConnection($"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={relativeMdfPath};Integrated Security=True")
+
         'had to use single quotes on the file path:'G:\My Drive\Schoolwork\VS Repos\ICR140\ARS\Airline.mdf'
 
         ConnectionObj.Open()
-        Dim xLocation As Integer = 10                               'starting x location for picture boxes 
+        Dim xLocation As Integer = 10                               'starting x location for picture boxes
         Dim yLocation As Integer = 10                               'starting y location for picture boxes
 
         Names(0) = "First Name"                                     'sets the name of Names(0) string
@@ -26,17 +32,16 @@ Public Class Form1
         '                          --------------------Business Class--------------------
 
         For index = 0 To 19                                         'loop 20 times (indexes 0-19
-            BizClass(index) = New PictureBox() With {               'creates new picturebox 
-               .ImageLocation = EmptSeat,                           'sets the image of the PictureBox to EmptSeat 
+            BizClass(index) = New PictureBox() With {               'creates new picturebox
+               .ImageLocation = EmptSeat,                           'sets the image of the PictureBox to EmptSeat
                .Size = New Size(200, 200),'                          sets size of image
-               .Location = New Point(xLocation, yLocation),         'sets the location of the PictureBox 
+               .Location = New Point(xLocation, yLocation),         'sets the location of the PictureBox
                .Name = "BizPictureBox" + index.ToString(), '         sets the name of the PictureBox + index
                .Visible = True,                                     'sets to visible
                .Enabled = True,                                     'set to enabled
-               .Cursor = Cursors.Hand                               'sets the cursor to a hand when hovering 
+               .Cursor = Cursors.Hand                               'sets the cursor to a hand when hovering
             }
-            Tab1.Controls.Add(BizClass(index))                      'adds the PictureBox Tab1 for BizClass                                                             
-
+            Tab1.Controls.Add(BizClass(index))                      'adds the PictureBox Tab1 for BizClass
 
             AddHandler BizClass(index).Click, AddressOf PictureBoxClick
             'attaches an event handler to the PictureBox,so that when it is clicked,
@@ -44,7 +49,7 @@ Public Class Form1
 
             '                   --------------------Business Reservation--------------------
 
-            BizReso(index) = New RichTextBox() With {               'creates new RTB 
+            BizReso(index) = New RichTextBox() With {               'creates new RTB
                 .Size = New Size(200, 150),                         'sets the size of the RTB
                 .Location = New Point(xLocation, yLocation + 200),  'add + 200 to yLocation (below PB's)
                 .Name = "RichTextBox" + index.ToString(),           'sets the name of the RTB
@@ -52,7 +57,7 @@ Public Class Form1
                 .Enabled = True,                                    'sets to enabled
                 .Cursor = Cursors.Hand                              'sets cursor to hand on hover
             }
-            Tab1.Controls.Add(BizReso(index))                       'adds the PictureBox to Tab1 for BizClass                                                                
+            Tab1.Controls.Add(BizReso(index))                       'adds the PictureBox to Tab1 for BizClass
 
             xLocation += 220                                        'moves the xlocation 220px to the right,                                                                   then repeats on the next iteration
 
@@ -74,12 +79,12 @@ Public Class Form1
 
         '                           --------------------Name Boxes & Labels--------------------
 
-        NameBoxes(0) = New TextBox With {                           'create new textbox 
+        NameBoxes(0) = New TextBox With {                           'create new textbox
                 .Name = "TextBox0",                                 'set the name of the textbox to TextBox0
                 .Location = New Point(1325, 400),                   'sets the location of Textbox0
         .Size = New Size(150, 100)                                  'sets the size of TextBox0
                 }
-        NameBoxes(1) = New TextBox With {                           'create new TextBox 
+        NameBoxes(1) = New TextBox With {                           'create new TextBox
                     .Name = "TextBox1",                             'specify name of the TB to TextBox1
                     .Location = New Point(1325, 450),               'sets the location of the TextBox1 50px below TextBox0
             .Size = New Size(150, 100)                              'sets the size of the TextBox
@@ -87,13 +92,13 @@ Public Class Form1
         Me.Controls.Add(NameBoxes(0))
         Me.Controls.Add(NameBoxes(1))
 
-        NameLabel(0) = New Label With {                             'create new label 
-                        .Name = "Label0",                           'sets name of the label to label0        
+        NameLabel(0) = New Label With {                             'create new label
+                        .Name = "Label0",                           'sets name of the label to label0
                     .Location = New Point(1200, 400),               'sets the location of label0
                     .Text = Names(0),                               'sets the text of the label to Names(0)
                     .Size = New Size(150, 50)                       'sets size of the label
                  }
-        NameLabel(1) = New Label With {                             'create new label 
+        NameLabel(1) = New Label With {                             'create new label
                         .Name = "Label1",                           'sets name of the label to label1
                     .Location = New Point(1200, 450),               'sets the location of label1
                     .Text = Names(1),                               'sets the text of the label to names(1)
@@ -110,7 +115,7 @@ Public Class Form1
         For index = 0 To 99                                         'loop 100 times
             EcoClass(index) = New PictureBox() With {               'creates new PB with specified properties
                 .ImageLocation = EmptSeat,                          'sets image of the PictureBox to the EmptSeat image
-                .Size = New Size(200, 200),                         'sets size of PB 
+                .Size = New Size(200, 200),                         'sets size of PB
                 .Location = New Point(xLocation, yLocation),        'sets the location of the PictureBox on the form
                 .Name = "EcoPictureBox" + index.ToString(),         'sets the name of the PB to "EcoPictureBox" plus index
                 .Visible = True,                                    'sets to visible
@@ -130,8 +135,8 @@ Public Class Form1
                 .Enabled = True,                                    'sets to enabled
                 .Cursor = Cursors.Hand                              'sets the cursor to a hand on hover
             }
-            TabPage2.Controls.Add(EcoReso(index))                   'contols for tabPage2 (EcoReso)                                                            
-            xLocation += 220                                        'moves the xlocation 220px right, then iterates                                                            
+            TabPage2.Controls.Add(EcoReso(index))                   'contols for tabPage2 (EcoReso)
+            xLocation += 220                                        'moves the xlocation 220px right, then iterates
 
             If (index + 1) Mod 5 = 0 Then '
 
@@ -190,10 +195,10 @@ Public Class Form1
 
     Private Sub PictureBoxClick(sender As Object, e As EventArgs)
         'create new function called PictureBoxClick
-        'Get the clicked picturebox seat number from its name 
+        'Get the clicked picturebox seat number from its name
 
         Dim PictureBoxClicked As PictureBox = sender
-        'get the clicked PictureBox control from sender 
+        'get the clicked PictureBox control from sender
 
         Dim PicBoxNumber As Integer = Convert.ToInt32(PictureBoxClicked.Name.Substring(13))
         'get the number part of the PictureBox name by removing the first 13 characters
@@ -214,7 +219,7 @@ Public Class Form1
         '    MessageBox.Show($"Please fill in {Names(0)} and {Names(1)}")
         '    Return
         'End If
-        '----------------------------------------------------------------------------------------------------------------- 
+        '-----------------------------------------------------------------------------------------------------------------
 
         If BizOrEco = "Biz" Then
             'checks if value of BizorEco is "Biz"
@@ -229,10 +234,10 @@ Public Class Form1
         End If
 
         If PictureBoxClicked.ImageLocation = EmptSeat And BizOrEco = "Biz" Then
-            'Check if the clicked PictureBox control is empty and is in the business class. 
+            'Check if the clicked PictureBox control is empty and is in the business class.
 
             PictureBoxClicked.ImageLocation = FullSeat
-            'Set the ImageLocation Property Of the PictureBox control to FullSeat                                                                                                          
+            'Set the ImageLocation Property Of the PictureBox control to FullSeat
             BizReso(PicBoxNumber).Text = $"{Names(0)}: {NameBoxes(0).Text} {vbCrLf}{Names(1)}: {NameBoxes(1).Text}"
             'Set the business reservation box to the name of the person reserving the seat
 
@@ -287,7 +292,7 @@ Public Class Form1
             'and if the seat is in the Biz class section
 
             Dim result As DialogResult = MessageBox.Show("Do you want to cancel your reservation?", "Please confirm", MessageBoxButtons.YesNo)
-            'If true, asks the user to confirm their cancellation by clicking a yes or no button. 
+            'If true, asks the user to confirm their cancellation by clicking a yes or no button.
 
             If result = DialogResult.Yes Then
                 'If the user selects Yes, the following code runs. If no, nothing happens
@@ -337,90 +342,7 @@ Public Class Form1
     '2) We check if the seat is full
     '3) If the seat is full, display messsage to ask if you want to cancel the reservation
     '4) Display yes/no prompt asking to confirm you want to cancel. Need to look this up
-    '5) If yes, set the seat to empty again, display message and clear the richtextbox. 
+    '5) If yes, set the seat to empty again, display message and clear the richtextbox.
     '6) If no, nothing happens
 
-
-
-
 End Class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

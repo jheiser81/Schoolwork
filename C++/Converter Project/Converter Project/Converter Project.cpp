@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "Converter.h"
 #include "WeightConverter.h"
 #include "HeightConverter.h"
@@ -7,6 +5,8 @@
 #include "Calculator.h"
 #include "BMI_Calculator.h"
 #include "Speed_Calculator.h"
+#include <iostream>
+#include <string>
 
 // This function asks the user if they want to perform another calculation, taking a yes or no input from the user. If yes, the program will loop back to the beginning. If no, the program will end. If the user enters an invalid input, the program will ask the user to enter yes or no again.
 #pragma region anotherCalculation function
@@ -183,28 +183,45 @@ int main()
 			std::cin >> calculationType;
 		}
 
+		// Perform BMI calculation
 		if (calculationType == "BMI")
 		{
-			// Perform BMI calculation
-			BMI_Calculator bmiCalculator;
-			bmiCalculator.description(); //calling the description function from BMI_Calculator class
+			//These are the objects of the classes that will be used to call the functions
+			//Since the BMI_Calculator and Speed_Calculator classes are derived from the Converter class, we can use the Converter class to call the description function.
+			//Similarly, since the WeightConerter, HeightConverter, and DistanceConverter classes are derived from the Converter class, we can use the base Converter class to call the description function. This uses polymorphism and dynamic binding.
 
-			WeightConverter weightConverter;
-			weightConverter.description(); //calling the description function for WeightConverter
+			Calculator* calculator = new BMI_Calculator(); //creating a pointer to BMI_Calculator
+			calculator->description(); //calling the description function from BMI_Calculator class
 
-			HeightConverter heightConverter;
-			heightConverter.description(); //calling the description function for HeightConverter
+			Converter* weightConverter = new WeightConverter();
+			weightConverter->description();
+
+			Converter* heightConverter = new HeightConverter();
+			heightConverter->description();
 
 			bmiCalculation(unitSystem); //calling the bmiCalculation function
+
+			//Old Code: This would have been static binding
+			/*
+			//BMI_Calculator bmiCalculator;
+			//bmiCalculator.description(); //calling the description function from BMI_Calculator class
+
+			//WeightConverter weightConverter;
+			//weightConverter.description(); //calling the description function for WeightConverter
+
+			//HeightConverter heightConverter;
+			//heightConverter.description(); //calling the description function for HeightConverter
+
+			//bmiCalculation(unitSystem); //calling the bmiCalculation function*/
 		}
+		// Perform speed calculation
 		else if (calculationType == "speed")
 		{
-			// Perform speed calculation
-			Speed_Calculator speedCalculator;
-			speedCalculator.description(); //calling the description function
+			Calculator* calculator = new Speed_Calculator();
+			calculator->description();
 
-			DistanceConverter distanceConverter;
-			distanceConverter.description(); //calling the description function for DistanceConverter
+			Converter* distanceConverter = new DistanceConverter();
+			distanceConverter->description();
 
 			speedCalculation(unitSystem); //calling the speedCalculation function
 		}
