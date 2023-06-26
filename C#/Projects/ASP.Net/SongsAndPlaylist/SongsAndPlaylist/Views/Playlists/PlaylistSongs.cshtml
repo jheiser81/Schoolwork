@@ -1,0 +1,71 @@
+﻿@*@model SongsAndPlaylist.Models.Playlists
+
+<h2>@Model.Name</h2>
+
+@if (Model.PlaylistSongs.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlaylistSongs.First().Song.Title)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var playlistSong in Model.PlaylistSongs)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => playlistSong.Song.Title)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>This playlist does not have any songs.</p>
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+
+@model SongsAndPlaylist.Models.Playlists
+
+@{
+    ViewData["Title"] = "PlaylistSongs";
+}
+
+<h1>@Model.Name</h1>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaylistSongs.First().Song.Title)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var playlistSong in Model.PlaylistSongs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => playlistSong.Song.Title)
+                </td>
+                <td>
+                    @Html.ActionLink("Remove", "RemoveSongFromPlaylist", new { playlistId = playlistSong.PlaylistId, songId = playlistSong.SongId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

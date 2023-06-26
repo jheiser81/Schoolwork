@@ -1,0 +1,46 @@
+﻿@model SongsAndPlaylist.Models.Playlists
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Playlists</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PlaylistId">Edit</a> |
+    <a asp-action="Index">Back to List</a> 
+    @*<a asp-action="PlaylistSongs" asp-route-id="@Model.PlaylistId">View Songs</a>*@ @*this link doesn't work, will tyr to fix later'*@
+</div>
+
+<h4>Songs in the Playlist</h4>
+@if (Model.PlaylistSongs != null && Model.PlaylistSongs.Any())
+{
+    <ul>
+        @foreach (var item in Model.PlaylistSongs)
+        {
+            <li>@item.Song.Title</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No songs in this playlist yet.</p>
+}
+
+
+
+
+
