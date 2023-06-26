@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body class="bg">
+    <nav class="nav">
+      <ul class="navbar">
+        <li class="nav-li">
+          <a class="nav-item-pages-1" href="index.html">Home</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-item-pages-1" href="Prices.html">Pricing</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-item-pages-1" href="new_contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="overlay">
+      <div class="form_container">
+        <form action="new_contact.html">
+          <h3>Enter contact info below</h3>
+          <p><label for="first-name">First Name</label></p>
+          <input type="text" name="first_name" id="first_name" />
+          <p><label for="last-name">Last Name</label></p>
+          <input type="text" name="last_name" id="last_name" />
+          <p><label for="phone">Phone</label></p>
+          <input type="tel" name="phone" id="phone" />
+          <p><label for="email">Email</label></p>
+          <input type="email" name="email" id="email" />
+          <h3>Location Type</h3>
+          <div class="radio_box_con">
+            <div class="radio_box_col">
+              <label class="radio_box_label">
+                <input type="radio" name="venue" value="Home" />Home</label
+              >
+              <label class="radio_box_label">
+                <input type="radio" name="venue" value="Venue" />Venue</label
+              >
+            </div>
+          </div>
+          <h3>Address of home or venue</h3>
+          <textarea rows="3" cols="22" name="address" id="address"></textarea>
+          <h3>Type of Service</h3>
+          <select name="" id="">
+            <option value="">Select</option>
+            <option value="Option 1">Lunch</option>
+            <option value="Option 2">Dinner</option>
+            <option value="Option 3">Canapes</option>
+          </select>
+          <h3>Dietary Restrictions</h3>
+          <div class="checkbox_con">
+            <div class="checkbox_col">
+              <label class="checkbox_label">
+                <input type="checkbox" name="Diet" value="Low Sodium" />Low
+                Sodium</label
+              >
+              <label class="checkbox_label">
+                <input type="checkbox" name="Diet" value="Low Carb" />Low
+                Carb</label
+              >
+              <label class="checkbox_label">
+                <input type="checkbox" name="Diet" value="Paleo" />Paleo</label
+              >
+              <label class="checkbox_label">
+                <input
+                  type="checkbox"
+                  name="Diet"
+                  value="Vegetarian"
+                />Vegetarian</label
+              >
+              <label class="checkbox_label">
+                <input type="checkbox" name="Diet" value="Vegan" />Vegan</label
+              >
+              <label class="checkbox_label">
+                <input type="checkbox" name="Diet" value="Other" />Other</label
+              >
+            </div>
+          </div>
+          <textarea
+            rows="4"
+            cols="22"
+            placeholder="If other, please specify"
+          ></textarea>
+          <h3>Allergies and Intolerances</h3>
+          <div class="radio_box_con">
+            <div class="radio_box_col">
+              <label class="radio_box_label">
+                <input type="radio" name="allergy" value="Yes" />Yes</label
+              >
+              <label class="radio_box_label">
+                <input type="radio" name="allergy" value="No" />No</label
+              >
+            </div>
+          </div>
+          <textarea
+            rows="4"
+            cols="22"
+            placeholder="If yes, please specify"
+          ></textarea>
+          <h3>Add a Message</h3>
+          <textarea rows="8" cols="60" placeholder="Type message"></textarea>
+          <button class="form_btn">Submit</button>
+          <button class="form_btn">Reset</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

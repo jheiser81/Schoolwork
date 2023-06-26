@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body class="form_bg">
+    <nav class="title-nav">
+      <div class="title-nav-items">
+        <a class="nav_text" href="index.html">Home</a>
+      </div>
+      <div class="title-nav-items">
+        <a class="nav_text" href="About.html">About</a>
+      </div>
+      <div class="title-nav-items">
+        <a class="nav_text" href="Projects.html">Projects</a>
+      </div>
+    </nav>
+    <div class="form_container">
+      <form action="Contact.html">
+        <p><label class="form_items" for="first-name">First Name</label></p>
+        <input type="text" name="first_name" id="first_name" />
+        <p><label for="last-name">Last Name</label></p>
+        <input type="text" name="last_name" id="last_name" />
+        <p><label for="phone">Phone</label></p>
+        <input type="tel" name="phone" id="phone" />
+        <p><label for="email">Email</label></p>
+        <input type="email" name="email" id="email" />
+        <textarea rows="8" cols="45" placeholder="Type message"></textarea>
+        <button class="form_btn">Submit</button>
+        <button class="form_btn">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>
