@@ -43,19 +43,18 @@ public: //this is the public section of the class, where the functions are decla
 	  const is used so that the function will not modify the object's data members
 	  & is used so that the function will use the address of the parameter, not the value*/
 
-	  /*
-	  std::string getMake() const;
-	  void setMake(const std::string& make);
+	std::string getMake() const;
+	void setMake(const std::string& make);
 
-	  std::string getModel() const;
-	  void setModel(const std::string& model);
+	std::string getModel() const;
+	void setModel(const std::string& model);
 
-	  int getYear() const;
-	  void setYear(int year);
+	int getYear() const;
+	void setYear(int year);
 
-	  //Other functions (what the object can do)
+	//Other functions (what the object can do)
 
-	  void start() const;
-	  void stop() const;
-	  void accelerate() const;*/
+	void start() const;
+	void stop() const;
+	void accelerate() const;
 };

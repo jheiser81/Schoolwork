@@ -1,0 +1,33 @@
+List of entities and relationships with their attributes:
+Entities:
+1.	Branches
+•	Branch_ID (Primary Key)
+•	Branch_Name
+•	Address
+•	Phone_Number
+2.	Customers
+•	Customer_ID (Primary Key)
+•	First_Name
+•	Last_Name
+•	Address
+•	Phone_Number
+3.	Accounts
+•	Account_ID (Primary Key)
+•	Account_Type
+•	Balance
+•	Open_Date
+•	Customer_ID (Foreign Key)
+4.	Transactions
+•	Transaction_ID (Primary Key)
+•	Amount
+•	Date
+•	Type
+•	Customer_ID (Foreign Key)
+•	Account_ID (Foreign Key)
+Relationships:
+1.	A branch can have many customers
+2.	A customer can only be associated with one branch
+3.	A customer can have multiple accounts
+4.	An account can only belong to one customer
+5.	Transactions can be associated with either a customer or an account
+

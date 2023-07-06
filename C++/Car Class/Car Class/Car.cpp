@@ -19,12 +19,12 @@
  */
 
  //--Make the constructor--
- /*
+
 Car::Car(const std::string& make, const std::string& model, int year) : make(make), model(model), year(year) {}
-Car::~Car() {}*/
+Car::~Car() {}
 
 //--Getters and setters--
-/*
+
 std::string Car::getMake() const { return make; }
 void Car::setMake(const std::string& make) { this->make = make; }
 
@@ -38,4 +38,4 @@ void Car::setYear(int year) { this->year = year; }
 
 void Car::start() const { std::cout << "The car has started. \n"; }
 void Car::stop() const { std::cout << "The car has stopped. \n"; }
-void Car::accelerate() const { std::cout << "The car is accelerating. \n"; }*/
+void Car::accelerate() const { std::cout << "The car is accelerating. \n"; }
