@@ -1,0 +1,8 @@
+let x = 20//create variable x
+let y = 5 // create variable y
+let difference = x - y // create a variable called difference and store the value of x subtracted from y
+alert(difference)// output an alert to the browser with the difference.
+let a = 20
+let b = 5
+let sum = a + b
+alert(sum)

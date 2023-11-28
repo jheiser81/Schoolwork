@@ -1,0 +1,9 @@
+I have provided two images you can use for the cleaning (Or another serviced based site) and an image of my HTML site you can copy
+
+Feel free to use images from a royalty-free site like pixabay (don't use images from the internet that you don't have permission to use)
+
+1) Add an image folder to your directory 
+2) Add the main water image at 100%
+3) Add three images for the product 30%
+3) reference the image of my site
+4) compress the folder for the cleaning site and upload it to this assignment

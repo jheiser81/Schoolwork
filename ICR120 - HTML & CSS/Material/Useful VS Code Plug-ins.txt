@@ -1,0 +1,13 @@
+Live server  – will
+update your html, css, js as soon as you type it
+
+
+Auto rename – will match your tags
+
+
+Material Icon – makes your files and folders visually
+relevant.
+
+
+Code spell Checker - 
+Checks for spelling errors

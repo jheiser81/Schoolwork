@@ -1,0 +1,8 @@
+Clone repo:
+1) open power shell 
+2) use the "cd" command to navigate to the folder you want to store things in (to find more info check out the link at the bottom of the page CD PowerShell)
+3) type: git clone https://github.com/Maya-Teaching-Kali/6_forms.git
+4) cd 6_forms
+4) type : code .
+
+The instructions are in the script.js file

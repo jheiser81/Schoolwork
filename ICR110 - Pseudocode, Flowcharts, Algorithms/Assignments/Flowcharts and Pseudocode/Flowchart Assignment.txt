@@ -1,0 +1,37 @@
+Exercise 1)
+Using Input/Output and If statements
+Take User input that is a number, Put it into a variable, and using if statements, determine if the number is even or odd
+           Case1) Input = 5
+                        output = Odd
+
+           Case 2) Input = 22
+                          output = Even 
+NumberToCheck = UserInput
+if (NumberToCheck is evenly divisible by 2 )
+      Print Even
+else 
+      Print Odd
+end program
+
+Exercise 2)
+Using Input/Output and If statements
+Take User input that is a number, Put it into a variable, and using if statements, determine if the is evenly divisible by 3 or evenly divisible by 5. When the number is evenly divisible by 3 print "fizz". When the number is evenly divisible by 5 print "buzz". When it is evenly divisible y both print "FizzBuzz". in all other circumstances print "No fizz or buzz"
+           Case1) Input = 25
+                        output = Buzz
+
+           Case 2) Input = 30
+                          output = FizzBuzz 
+           Case 3) Input = 12
+                          output = Fizz 
+           Case 4) Input = 11
+                          output = No fizz or buzz
+NumberToCheck = UserInput
+if ( NumberToCheck % 3 == 0 AND NumberToCheck % 5 == 0 )
+      Print FizzBuzz
+else if ( NumberToCheck % 3 == 0 )
+      Print Fizz
+else if ( NumberToCheck %  5== 0 )
+      Print Buzz
+else 
+     Print No fizz or buzz
+end program

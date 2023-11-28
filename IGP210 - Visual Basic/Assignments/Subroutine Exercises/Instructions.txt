@@ -1,0 +1,23 @@
+Exercise 1:
+Make the product (multiplication), quotient(division) and difference (Subtraction) Subroutines just like sum and add them to the form load and button click
+Input form load= “Form Load”, 10, 5
+Output = “Form load product arguments 10 * 5 = 50”
+Input button click = “Button click”, 55, 20
+Output = “Button click product arguments 55 * 20 = 1100”
+Input form load= “Form Load”, 10, 5
+Output = “Form load quotient arguments 10 / 5 = 2”
+Input button click = “Button click”, 20, 55
+Output = “Button click quotient arguments 55 / 20 = 2.75”
+Input form load= “Form Load”, 10, 5
+Output = “Form load difference arguments 10 - 5 = 5”
+Input button click = “Button click”, 20, 55
+Output = “Button click difference arguments 55 - 20 = 35”
+
+Extra:
+makes a subroutine that prints out the multiplication table a single number input
+input = 3
+output =
+0  1  2  3
+1  1  2  3
+2  2  4  6
+3  3  6  9

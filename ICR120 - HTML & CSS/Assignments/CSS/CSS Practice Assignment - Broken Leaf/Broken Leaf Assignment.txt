@@ -1,0 +1,5 @@
+Make a new directory called Your_Name_CSS_Assignment:
+
+1)Look at the image "Inline-box.png" - Make the flag using three div tags and set display:inline-block (I used an image tag nested in a div for the maple leaf)
+2) all other images defined as flex box use flexbox to make 
+3) submit your code folder as a zip file

@@ -1,0 +1,10 @@
+Add 3 new buttons to your form difference (subtract), product (multiply) and quotient
+(divide) use the same three Textboxes you used for sum (add).
+1)
+Input Difference = 20, 5
+     Output = 15
+2)
+Input product = 20, 5
+     Output = 100
+3)
+Input quotient = 20, 5

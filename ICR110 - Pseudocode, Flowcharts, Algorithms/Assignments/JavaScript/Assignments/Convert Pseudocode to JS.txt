@@ -1,0 +1,11 @@
+First Exercise. Make pseudocode below into javascript
+Doing your own research
+1)look up input/output, variables
+2)take in a userInput, put it into a variable and add the variable to the number 10 with a new variable called sum.
+3) print the variable
+
+
+Pseudocode:
+x = input
+sum = x + 10
+print sum

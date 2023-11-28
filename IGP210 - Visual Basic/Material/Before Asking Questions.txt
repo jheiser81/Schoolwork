@@ -1,0 +1,8 @@
+1) Copy and paste the error message into google and try to understand it
+2) Debugger, debugger, debugger (breakpoints)
+3) Once you have done this process at least 10 times, ask a question using this formula
+
+I am Working on the _______________
+When I try to __________________
+I think the problem might be  __________
+I've tried _______________ and _______________, but ___________________

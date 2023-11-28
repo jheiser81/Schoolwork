@@ -1,0 +1,8 @@
+Exercise 1:
+Create
+an array of 100 random numbers, then calculate how many odd numbers, even
+numbers (even excluding 0) and zeros there are in the array.
+Exercise 2:
+Use
+the same array in exercise 1 to check for the largest number, smallest number,
+add the whole array together, and find the average.

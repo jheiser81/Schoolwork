@@ -1,0 +1,14 @@
+You should have three basic pages for submission (index.html, contact.html, pricing.html) the about page is extra.
+
+1) 40% for the use of Classes, Flexbox, Positions, The box model, background Images, styled link buttons, Styled Forms, overlay, box-shadow and (transitions or keyframe)
+2) 40% How you structure your folders img, HTML and CSS. Everything needs to be formatted otherwise it will not be accepted as a submission. CSS must be external otherwise it will not be accepted.
+3) 20% based on Responsiveness, it should shrink and expand smoothly
+
+60% is a passing mark. 
+
+Late projects will lose 5% of the total mark per day.
+
+Remember great is the enemy of good. A simple good project is better to submit than a complex project that could become great but you run out of time
+
+Everything needs to be formatted otherwise it will not be accepted as a submission.
+CSS must be external otherwise it will not be accepted.

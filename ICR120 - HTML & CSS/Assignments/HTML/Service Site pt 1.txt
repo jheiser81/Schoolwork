@@ -1,0 +1,10 @@
+Exercise 1:
+Make a new directory (folder) called Cleaning_Site (or whatever service you like)
+Make an index.html file and add:
+Make a header, main, and footer tag.
+In the header add an h1 tag
+In the main have an h2 tag and a p tag
+In the footer have an h3 tag and an
+unordered list. (look up lists)
+Exercise 2:
+Do the same process as you did for exercise 1 but for the portfolio website You will be building to show to future employers.

@@ -1,0 +1,18 @@
+Convert binary to decimal questions.
+
+1) 10000111101
+2) 111111000001
+3) 10101010
+4) 0101100101
+5)1010011010
+
+
+For those of you who are finished please go ahead and read the next part of the slides from yesterday. Then try to solve the decimal (base 10to binary problems below.
+
+
+1)88
+2)565
+3)98999
+4)11111
+5)1010102
+6) 42

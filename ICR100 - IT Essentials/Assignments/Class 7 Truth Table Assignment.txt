@@ -1,0 +1,42 @@
+1) Fill in the Truth Table in the Slides
+
+In your own words:
+2) Explain XOR
+Requires an exact (T or F) or (F or T) to output a T. if we have (T and T) or (F and F) we output F
+3) Explain AND
+-Require P and Q to Be T for us to output T (T,  T). All other combinations will output F (F, F) or (T, F) or (F, T). 
+-The output will be true only if both input values are true. Otherwise, we will output false
+4) Explain OR
+-OR requires only one promise to be true, (T, T) or (T, F) or (F, T) to output true otherwise it will output false (F, F)
+5) Explain Negation
+Is the opposite of what is input, if we input a T we get an F, and if we input a F we will get a T.
+6) Explain NOR
+NOR is the opposite of OR, this requires P and Q to be false to be True, So (F, T) OR (T, F) OR (T,T) will output false
+7) Explain Unary operator
+We have one input for the operator
+8) Explain Binary operator
+we have two inputs for our operator
+
+What do these tables represent (AND, OR, xOR...etc)?
+9) AND
+T   T = T
+F   F = F
+F   T = F
+T   F = F
+
+10) OR
+T   T = T
+F   F = F
+F   T = T
+T   F = T
+11) XOR
+T   T = F
+F   F = F
+F   T = T
+T   F = T
+Extra concept to look up
+12)XNOR
+T   T = T
+F   F = T
+F   T = F
+T   F = F

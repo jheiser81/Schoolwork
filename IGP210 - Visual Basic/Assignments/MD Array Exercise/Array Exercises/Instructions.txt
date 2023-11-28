@@ -1,0 +1,40 @@
+Exercise 1:
+Using a multidimensional array populate(fill up) the array and print out a 5 x 5 tile board like the one below into a rich textbox
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Exercise 2:
+
+Create a program that has an array of names. When the program runs calculate how
+many times the name is repeated.
+
+
+Input = {John, Sam, Jen, Bob, Carry, Eugine, John}
+
+
+The output will be:
+Name
+John: 2 times
+
+If there is only one name you will have to output:
+
+Name
+John: 1 time
+
+Optional
+Exercise 3
+Convert a string to camel case:
+Input
+= “Be kind to people”
+Output
+= “beKindToPeople”
+Look
+up:
+1.Split()
+2.Substring()
+3.ToUpper()
+4.ToLower()
+5.Join()

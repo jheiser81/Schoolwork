@@ -1,0 +1,20 @@
+Arithmetic operators
++ add
+- subtract
+* multiply
+/ division 
+% Modulous  
+Comparison operators
+== equal
+!= not equal
+> greater than 
+< less than
+>= greater than or equal to 
+<= less than or equal to
+logical operators 
+&& AND 
+|| OR
+! NOT
+Assignment operator
+= assignment 
+https://www.techtarget.com/whatis/definition/operator#:~:text=In%20mathematics%20and%20computer%

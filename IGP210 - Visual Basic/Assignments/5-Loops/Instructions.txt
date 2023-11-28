@@ -1,0 +1,18 @@
+Homework 1: requiered  
+User inputs two numbers The program will print and sum all the even numbers between the user’s input.
+Input = 1, 9
+Output = 2, 4, 6, 8
+“The sum of all the even numbers is 20”
+
+ 
+Extra 1:  not requiered
+Exercise 3 :
+Determine if a number is a prime number
+Input = 1399
+Output = It is True Your number is prime
+Input = 22
+Output = It is False Your number is prime
+Input = 2
+Output = It is True Your number is prime
+Input = 1
+Output = It is False Your number is prime

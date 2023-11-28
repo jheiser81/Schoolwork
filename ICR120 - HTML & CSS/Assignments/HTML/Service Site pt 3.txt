@@ -1,0 +1,12 @@
+Add 3 pages to your sites in the same directory as your index.html file:
+For cleaning:
+Pages(based on <a> tags):
+Contact, About and Pricing
+in contact:
+Add a form that includes:
+first name, last name
+I want you to research other contact forms from other sites, see what they have and try to add other things to your form(radio buttons,  checkboxes, etc...)
+For portfolio:
+Pages:
+Contact, About and Projects (projects will be where you add the projects we make in class)
+And do the same for the form portion as you did for the cleaning site.

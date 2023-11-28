@@ -1,0 +1,10 @@
+System software:
+https://www.youtube.com/watch?v=dJH_ev7DR5I&ab_channel=Craig%27n%27Dave
+Compiler:
+https://www.youtube.com/watch?v=QXjU9qTsYCc&t=392s&ab_channel=FrameofEssence
+Interpreter:
+https://www.youtube.com/watch?v=Zcopr8JZrpU&ab_channel=IAmDevGrant
+
+
+Extra:
+https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/

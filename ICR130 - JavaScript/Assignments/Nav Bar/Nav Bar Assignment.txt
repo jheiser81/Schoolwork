@@ -1,0 +1,17 @@
+Clone repo:
+1) open power shell 
+2) use the "cd" command to navigate to the folder you want to store (to find more info check out the link at the bottom of the page CD PowerShell)
+3) type: git clone https://github.com/Maya-Teaching-Kali/Nav_display.git
+4) type : code .
+make sure it is code . the space and period opens the file 
+
+Make button
+1)      Use an id selector to get the menu button
+2)      Use a query selector to select the .nav
+3)      Add a click event listener to the menu button
+4)      Make the display change so it toggles between display none and displays flex (block won’t look good)
+5)      If you have issues use the console and the debugger
+
+
+
+CD powershell: https://www.itprotoday.com/powershell/how-use-powershell-navigate-windows-folder-structure#:~:text=Typing%20CD%5C%20causes%20PowerShell%20to,followed%20by%20the%20folder%20

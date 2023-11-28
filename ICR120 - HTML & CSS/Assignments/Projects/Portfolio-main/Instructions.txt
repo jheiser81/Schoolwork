@@ -1,0 +1,18 @@
+You should have three basic pages for submission (index.html, contact.html, portfolio.html) the about page is extra.
+
+
+1) 40% for the use of Classes, Flexbox, Positions, The box model, background Images, styled link buttons, Styled Forms, overlay, box-shadow and (transitions or keyframe)
+2) 40% How you structure your folders img, HTML and CSS. everything needs to be formatted otherwise it will not be accepted as a submission. CSS must be external otherwise it will not be accepted.
+3) 20% based on Responsiveness, it should shrink and expand smoothly
+
+60% is a passing mark. Late projects will lose 5% of the total mark per day.
+
+Remember great is the enemy of good. A simple good project is better to submit than a complex project that could become great but you run out of time
+
+Rules for your portfolio:
+Keep it professional. Talk more about what you can do, don't go into your personal life.
+Generally don't use images of yourself. Employers may decide they don't like your shirt or haircut that day.
+
+Remember this is an evolving project. Do the basics for Wednesday then you can think about adding these extras for after as the course progresses:
+1) In the projects, you have, Include what languages you used and link them to the GitHub code
+2) You can add a 10-15 second demonstration video of what the project looks like in action. Employers look at hundreds of portfolios. Try to make their lives easy.
