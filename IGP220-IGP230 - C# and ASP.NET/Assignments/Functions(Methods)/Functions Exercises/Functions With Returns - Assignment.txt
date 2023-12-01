@@ -1,0 +1,54 @@
+Exercise 1:
+
+•Look back at the 100 random number array we made.
+•Move the find largest, find smallest, sum, average, and the (even, odd, zero counter) into separate subprograms.
+
+Exercise 2:
+•Make a Mini-ATM.
+•Using a function and subroutine, use the function to return the amount withdrawn as a messagebox. Use the subroutine to print the balance in a message box. Print the balance when after you withdraw
+•Output is on the next page, but feel free to use your own design
+
+Look at the slides for reference.
+
+Extra:
+Problems To give:
+-------------------------Functions---------------------------
+1) Write a function that reads 6 numbers and computes their maximum. Create the following functions
+Max1(int a, int b, int c)
+Max2(int a, int b, int c, int d)
+Max3(int a, int b, int c, int d, int e)
+Max4(int a, int b, int c, int d, int e, int f)
+
+How can Max2(int a, int b, int c, int d) utilize Max1(int a, int b, int c)...
+
+2)Reverse a string 
+Make a function that reverses a string
+string Reverse_String(const string str)
+	-Don't alter the input string you will get an error
+	input: "Life Is Great"
+	Return: "taerG sI efiL"
+	input: "Racecar"
+	Return: "racecaR"
+
+3) Is The array a Palindrome
+  -Read N, then N integers for an array. Call a function with the array to check if the array is a palindrome or not
+	string Is_Palindrome(const string str) 
+  	input: "Life Is Great"
+	Return: false
+	input: "Racecar"
+	Return: false
+	input: "racecar"
+	Return: true
+
+4) make a function that calculates the powers
+	- int PowerMethod(int base, int power)
+	input: base = 2, power = 3
+	return 8
+5) make a function that finds if a number is prime or not, and make a second number that finds the nth prime number
+	bool Is_Prime(int NumberToCheck)
+	input: 11
+	output: true
+	int Nth_PrimeNumber
+	input: 6
+	output: 13
+           Prime numbers: 2, 3, 5, 7, 11, [13], 17, 19

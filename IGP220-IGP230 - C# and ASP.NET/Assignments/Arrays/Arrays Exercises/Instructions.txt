@@ -1,0 +1,30 @@
+Exercise 1:
+
+
+Create
+an array of 10 unique numbers from 0 - 20, count how many odd numbers, even
+numbers (that aren’t zero) and zeros there are in the array.
+
+
+Input
+= 1, 5, 8, 0, 19, 4, 6, 15, 10, 13
+
+
+Output
+= “There are 5 odd, 4 even and 1 zero”
+Exercise
+2:
+
+
+
+Create
+an array of 100 random numbers, then calculate how many odd numbers, even
+numbers (even excluding 0) and zeros there are in the array.
+Exercise
+3:
+
+
+
+Use
+the same array in exercise 2 to check for the largest number, smallest number,
+add the whole array together, and find the average.

@@ -1,0 +1,32 @@
+Exercise 1:
+•Look back at the 100 random number array
+we made. 
+•Move the find largest, find smallest,
+sum, average, and the (even, odd, zero counter) into separate subprograms.
+Exercise 2:
+•Make a Mini-ATM.
+•Using a function and subroutine, use the
+function to return the amount withdrawn as a messagebox. Use the subroutine to print the balance
+in a message box. Print the balance when after you withdraw
+•Output is on the slides, but feel free
+to use your own design
+
+Extra:
+Hacker2000:
+the game is about a secret agent that is breaking into a server room. The agent has a super
+hacker 2000 that allows you to read 3 random numbers which are based on your difficulty*. In your program you will add and multiply the
+same three numbers and you will write to your user the following:
+
+    You are a secret agent breaking into a LEVEL (Difficulty 2,3,4,5,6,7,8,9) server room
+    There are three numbers in the code
+    The Code Multiplies to:_____
+    The Code Adds to:_____
+(
+examples: 
+the random numbers would be 2,3,4 
+add = 2 + 3 + 4 = 9
+multiply = 2 * 3 * 4 = 24
+)
+The player has 3 guesses
+if they guess one number wrong you will output "You died horribly!"
+if they guess right output "You broke The code!! On to the next level"

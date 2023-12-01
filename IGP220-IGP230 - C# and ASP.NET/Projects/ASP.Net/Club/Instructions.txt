@@ -1,0 +1,39 @@
+1) 30% 
+Implement the Index() method
+a. Call the GetInfoFromDB() method to retrieve data from the database
+b. Pass the data to the View
+
+Implement the GetInfoFromDB() method
+a. Connect to the database using the SqlConnection object
+b. Define and execute an SQL command to retrieve data (e.g., SELECT statement)
+c. Read the data and store it in a List<ClubMembers>
+d. Close the connection and return the List<ClubMembers>
+2)20%
+Implement the Create() methods
+a. Create the first Create() method with no parameters for displaying the form
+b. Create the second Create(ClubMembers clubMembers) method for handling form submission
+i. Connect to the database
+ii. Define and execute an SQL command to insert a new record (e.g., INSERT statement)
+iii. Close the connection and redirect to the Index view
+3)20%
+Implement the Edit() methods
+a. Create the first Edit(int id) method for displaying the form
+i. Retrieve the ClubMember with the given ID
+ii. Pass the ClubMember to the View
+b. Create the second Edit(int ID, ClubMembers clubMembers) method for handling form submission
+i. Connect to the database
+ii. Define and execute an SQL command to update the record (e.g., UPDATE statement)
+iii. Close the connection and redirect to the Index view
+4)10%
+Implement the Details() method
+a. Retrieve the ClubMember with the given ID
+b. Pass the ClubMember to the View
+5)20%
+Implement the Delete() methods
+a. Create the first Delete(int id) method for displaying the confirmation page
+i. Retrieve the ClubMember with the given ID
+ii. Pass the ClubMember to the View
+b. Create the second Delete(int id, ClubMembers clubMembers) method for handling the actual deletion
+i. Connect to the database
+ii. Define and execute an SQL command to delete the record (e.g., DELETE statement)
+iii. Close the connection and redirect to the Index view

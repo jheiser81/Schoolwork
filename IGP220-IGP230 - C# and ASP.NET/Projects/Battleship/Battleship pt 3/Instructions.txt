@@ -1,0 +1,44 @@
+Complete the functions in the code I have provided, You can use these on your own code or just finish mine
+
+Final requirements:
+
+-There must be two game boards, one for the computer, and one for the player
+-Random assignment of the ships
+-Random turn assignment 
+-display the player ships (you can display the computer ships for testing)
+-Player ships can be seen, computer ships are hidden and look just like water
+-When the player clicks on the computer gameboard the water will either change to an explosion or a miss image
+-After the player finishes their turn, the computer turn executes automatically
+-After each turn, there is a win check to see who won
+-If there is a winner, the game resets and a new game will start
+
+Marks will be given based on
+
+
+-10% for printing the gameboards
+-10% for random assignment and random turn
+-10% for displaying ships
+-15% for Player click
+-15% for Computer turn 
+-15% for win check 
+-15% for the game reset
+-10% for variables and functions with descriptive names that are human-readable (The only valid measurement of code quality is WTF/minute - Uncle Bob on clean code )
+
+Add Comments for my code if you used it
+Extras to add after submission:
+
+-Add number and letter to indicate the columns and rows
+-Add levels; if it is easy the random number will shoot everywhere, the harder it gets the random numbers are generated closer to the ships.
+-Make one ship across 2-3 spaces
+
+
+Maya's Comments:
+-10% for printing the gameboards = 10/10
+-10% for random assignment and random turn 10/10
+-10% for displaying ships 10 / 10
+-15% for Player click 14/15 - When the user clicks on a box that has already been clicked on it skips their turn. it should go back to the user
+-15% for Computer turn 15/15
+-15% for win check 15/15
+-15% for the game reset 15/15
+-10% for variables and functions with descriptive names that are human-readable (The only valid measurement of code quality is WTF/minute - Uncle Bob on clean code ) 10/10
+99/100

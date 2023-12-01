@@ -1,0 +1,94 @@
+Exercise:
+OOP Inheritance with Abstract Class and Override
+
+
+Objective:
+Create Animal, Dog, and Cat classes using OOP concepts and inheritance.
+
+
+Instructions:
+
+
+Start by creating an abstract
+class named "Animal" with the following attributes:
+
+private string variable
+"_name"
+private integer variable
+"_age"
+protected read-only string
+variable "_species"
+public string getter method for
+"_name"
+public void setter method for
+"_name"
+public string property
+"Breed"
+public integer property
+"Age"
+public constructor with
+parameters "name", "age", "breed", and
+"species"
+public virtual method
+"Eating" that returns a string
+public abstract method
+"Sleeping" that returns a string
+public method "Aging"
+that increments "_age" by 1
+
+Create a class named
+"Cat" that inherits from the "Animal" class with the
+following attributes:
+
+private string variable
+"_ambivalence"
+public string property
+"Ambivalence"
+public constructor with
+parameters "name", "age", "breed",
+"ambivalence", and "species"
+public override method
+"Sleeping" that returns a string
+public override method
+"Eating" that returns a string
+public method "Meow"
+that returns a string
+public method
+"SitOnKeyboard" that returns a string
+
+Create a class named
+"Dog" that inherits from the "Animal" class with the
+following attributes:
+
+private string variable
+"_barkPitch"
+public constructor with
+parameters "name", "age", "breed",
+"barkPitch", and "species"
+public override method
+"Sleeping" that returns a string
+public override method
+"Eating" that returns a string
+public method "Bark"
+that returns a string
+public method
+"WagTail" that returns a string
+
+In the "Form_Load"
+method, create instances of the "Cat" and "Dog"
+classes, and call their respective methods to test their functionality.
+
+
+Add Polymorphism:
+Part 1 - Array:
+Instantiate objects of both the Cat and Dog classes and assign them to an array of type Animal with the name kingdom.Loop through the kingdom array and call the Eat method on each object. The virtual and override keywords will ensure that the appropriate method is called based on the actual type of the object at runtime.
+
+Part 2 - Method:
+Instantiate objects of the Cat and Dog classes Make a FeedAnimial method in the form1 that takes in an Animal type for the parameter.
+Pass the cat and dog into different calls of the function.
+
+Note: The
+"Animal" class is an abstract class because it contains an abstract
+method "Sleeping". Abstract methods do not contain any implementation
+and must be implemented by the derived classes. The "Eating" method
+is marked as virtual so that derived classes can override it if needed.

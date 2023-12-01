@@ -1,0 +1,20 @@
+1) Make a random Assignment Function
+2) Make a Display ships function
+
+Random Assignment Function:     Use a random number generator to make random numbers.
+    Use a data structure called "HashSet" lines 16 and 17 in my code (do research)
+    loop while the HashSet.Count has less than 8 numbers generate random numbers for playerLocation
+    add a location x and y  
+    while the HashSet.Count has less than 8 numbers generate random numbers for ComputerLocation
+    add a location x and y          
+Display Ships Function:
+
+    Convert your HashSet.ToList() for the playerLocation, List is another data structure that acts like an array
+    Change the image location from water to ships
+    Convert your HashSet.ToList() for the computerLocation, List is another data structure that acts like an array
+    Change the image location from water to ships
+
+
+End result:
+
+You should have random ships on your gameboard every time you start the form.

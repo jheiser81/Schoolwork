@@ -1,0 +1,19 @@
+Create a class called "Dog" with the following private fields:
+•    string name
+•    int age
+•    string breed
+Create a constructor that takes in three parameters: "name", "age", and "breed". Inside the constructor, set the corresponding fields using the parameters.
+Add public getters and setters for each field. The getter for "name" should return the name as a string, the getter for "age" should return the age as an int, and the getter for "breed" should return the breed as a string. The setters for all three fields should take in a value and set the corresponding field to that value.
+Add the following public methods to the class:
+•    string Bark(): returns "Woof!" .
+•    string WagTail(): returns "Tail wagging...".
+In the "Form1" class Form1_Load, create an instance of the Dog class using the constructor and pass in "Jeff" as the name, 5 as the age, and "Labrador Retriever" as the breed. Use the getters to output the values of the name, age, and breed fields to the 
+
+richTextbox  .
+Finally, call the Bark and WagTail methods on the dog instance and observe their output into a richTextbox.
+
+
+Try making the getters and setters in the three different ways I demonstrated in class:
+name in the traditional way GetName() SetName().
+age in the more protected way using if statements Age{get {return_age;} set {if.....} }
+breed as the shorthand. Breed {get; set;}

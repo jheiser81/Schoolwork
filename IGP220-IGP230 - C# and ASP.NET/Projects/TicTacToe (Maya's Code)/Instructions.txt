@@ -1,0 +1,20 @@
+I have provided my code. If you plan to use it, please write comments explaining what the code is doing. If you plan to use tutorials, go through 3-5 different tutorials, then write your own code based on the logic they provided. 
+
+Make a Flow Chart, Algorithm, or pseudoCode for what TicTacToe Includes
+Look at the attached code to see how you can make a game board and take in user input to alter the game board values
+The final result will Include:
+3 x 3 matrix using strings, as I did in the code sample attached
+Initial Turn Decision (Random or not random, up to you)
+Button Click Event to change X and Y
+Check Valid Move
+Turn Function 
+Win Check (Win, Draw)
+Reset game
+
+
+Extra Ideas Once you have submitted and finished:
+
+1) Make it a picture box array (Like the array from the airline reservation system )
+2) Add a computer-generated turn
+3) make tic tac toe in VB and Javascript
+4) make the airline reservation in C# and Javascript

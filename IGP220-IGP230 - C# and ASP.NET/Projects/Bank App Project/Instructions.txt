@@ -1,0 +1,51 @@
+Exercise: Bank Account Registration Form
+
+
+You are tasked to create a bank account registration form
+using C# programming language. The registration form should have the following
+fields: first name, last name, date of birth, street number, street name, city,
+province, postal code, country, phone number, and email address.
+
+The form should have the following functionality:
+
+1.                  
+An "Insert" button that inserts the
+entered customer information into a database.
+
+
+2.                  
+A "Find" button that shows a customer in the Form.
+
+3.                  
+An "Update" button that updates the
+selected customer's information in the database.
+
+4.                  
+A "Delete" button that deletes the
+selected customer's information from the database.
+
+5.                  
+A clear button that clears all fields on the
+form.
+
+Extra:
+1.                  
+An optional feature to add another form to
+connect accounts so you can add a chequing account for the user.
+2.                   A Previous Click
+3.                   A Next Click
+
+
+Requirements:
+
+
+1.                  
+The program should perform all CRUD operations.
+
+2.                  
+The registration form should have all the
+necessary fields for a customer's information.
+
+3.                  
+The clear button should clear all fields on the
+form.

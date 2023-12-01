@@ -1,0 +1,21 @@
+You are hired at a company where that uses C# in ASP.NET. They have a setup that is a little different than what you are used to. You have previously used the SQL Client Library to connect to the database, but the company you are working for uses Entity Framework. This means you have to learn and understand Entity Framework and familiarize yourself with their codebase.
+Your manager asks you to improve the current project so that the user has a better experience. To do this, you must:
+In the Playlist-Songs Page:
+1.    Change the name of the Playlist-Songs Page to "Modify Playlists."
+2.    Allow the user to add a song to the playlist when they press "Create New."
+3.    Allow the user to delete a song from the playlist when they press "Delete."
+4.    Remove the "Edit" and "Details" buttons from this page.
+5.    Remove the PlaylistSongId column from the Index page.
+In the Playlist Page:
+1.    Allow the user to see all the songs associated with the playlist when they click on "Details."
+2.    Allow the user to delete the playlist without the songs being deleted from the Songs database.
+You have one week to complete the assigned tasks
+Extras:
+1) Move the Playlist-songs page Index functionality to the Playlist page. Think about it from a user perspective:
+-When A user goes to the playlist page they click on the playlist details
+-The playlist details come up so they can see their songs, 
+-If they don't see their song, they can click a button called "Add song to playlist".
+-If they do see a song they don't want they can click remove a song from the playlist.
+-That will take them to the same page as the create page or delete page in the PlaylistSongs page.
+-Remove the PlaylistSongs Page from your navigation.
+2) Add styles and extra functionality as desired.
