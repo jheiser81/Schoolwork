@@ -1,0 +1,137 @@
+// Pointers.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+//#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+struct Node
+{
+	int data;
+	Node* next;
+};
+//Node* start;//
+//what does a linked list include?
+void PrintList(Node* start) {
+	Node* current = start;//	
+	printf("<- Start -> \n");
+	while (current != NULL)
+	{
+		printf("Current Next Data: %d,Current Next Address %p\n", current->data, current->next);
+		current = current->next;
+	}
+	printf("<- End ->");
+}
+Node* addNewNodeToStartOfList(Node* start, int data) {
+	if (start == NULL)
+	{
+		start = (Node*)malloc(sizeof(Node));
+		start->data = data;
+		start->next = NULL;
+		return start;
+	}
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	newNode->data = data;
+	newNode->next = start;
+	start = newNode;
+	return start;
+	//the main difference is the return values. By adding a Node* to the function, we can return the start node to the main function. this could allow us to clear up some memory while the program is running if we dont need the list anymore//
+}
+void addNewNodeToEndOfList(int data) {
+
+}
+void deleteNodeFromStartList(int data) {
+
+}
+void deleteNodeFromEndList(int data) {
+
+}
+void addNewNodeAfterSpecificElementInList(int data) {
+
+}
+void addNewNodeBeforeSpecificElementInList(int data) {
+
+}
+
+
+void deleteSpecificNodeFromList(int data) {
+
+}
+void deleteAfterSpecificNodeFromList(int data) {
+
+}
+void deleteBeforeSpecificNodeFromList(int data) {
+
+}
+void LinkedListComponentsBrokenDown();
+//structs, pointers and malloc//
+int main()
+{
+	/*Node* start = NULL;
+	start = addNewNodeToStartOfList(start, 1);
+	start = addNewNodeToStartOfList(start, 2);
+	start = addNewNodeToStartOfList(start, 3);
+	while (true)
+	{
+		start = addNewNodeToStartOfList(start, 4);
+		PrintList(start);
+	}*/
+	LinkedListComponentsBrokenDown();
+	//Figure out how to loop throgh the linked list and print out the data and address of each node using a while loop
+}
+//void addNewNodeToStartOfList(int data) {
+//
+//	if (start == NULL)//if start has no beginning, we have to make it//
+//	{
+//		start = (Node*)malloc(sizeof(Node));//allocate memory for start so we can add data to it//
+//		start->data = data;//adding data to the start node//
+//		start->next = NULL;//I am making the start node point to NULL so we know when we are at the end of our list//;
+//		return;
+//	}
+//	Node* newNode = (Node*)malloc(sizeof(Node));
+//	newNode->data = data;
+//	newNode->next = start;
+//	start = newNode;//
+//	// fill in code here for the next hour
+//}
+
+void LinkedListComponentsBrokenDown() {
+
+	Node* start = (Node*)malloc(sizeof(Node));
+	Node* node2 = (Node*)malloc(sizeof(Node));
+	Node* node3 = (Node*)malloc(sizeof(Node));
+	Node* node4 = (Node*)malloc(sizeof(Node));
+
+	start->data = 1;
+	start->next = node2;
+	node2->data = 2;
+	node2->next = node3;
+	node3->data = 3;
+	node3->next = node4;
+	node4->data = 4;
+	node4->next = NULL;
+
+	printf("Node2 Data: %d,Node2 Address %p, Node2 Next Address %p\n", node2->data, node2, node2->next);
+	printf("Node3 Data: %d,Node3 Address %p, Node3 Next Address %p\n", node3->data, node3, node3->next);
+	printf("Start Next Data: %d,Start Next Address %p, Start Next Next Address %p\n\n\n\n\n\n\n", start->next->data, start->next, start->next->next);
+
+	free(node4);
+	node3->next = NULL;
+	Node* current = start;//
+	bool found = false;
+	while (current != NULL)
+	{
+		printf("Current Next Data: %d,Current Next Address %p\n", current->data, current->next);
+		current = current->next;
+	}
+	printf("this is node 4 data: %d", node4->data);
+}
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
